@@ -107,7 +107,7 @@ export class RouterOutlet implements OnDestroy {
     const inj = ReflectiveInjector.fromResolvedProviders(providers, injector);
 
     this.activated = this.location.createComponent(factory, this.location.length, inj, []);
-    this.activated.changeDetectorRef.detectChanges();
+    //this.activated.changeDetectorRef.detectChanges();
 
     this.activateEvents.emit(this.activated.instance);
   }
@@ -131,7 +131,7 @@ export class RouterOutlet implements OnDestroy {
     const injector = new OutletInjector(activatedRoute, outletMap, this.location.injector);
 
     this.activated = this.location.createComponent(factory, this.location.length, injector, []);
-    this.activated.changeDetectorRef.detectChanges();
+    //this.activated.changeDetectorRef.detectChanges();
 
     this.activateEvents.emit(this.activated.instance);
   }
